@@ -1,0 +1,49 @@
+{{ define "Index" }}
+    {{ template "Header" }}
+    {{ template "Menu"  }}
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Users</h1>
+            <table class="table table-striped ">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>age</td>
+                    <td>View</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+                </thead>
+                <tbody>
+                {{ range . }}
+                    <tr>
+                        <td>
+                            {{ .Id }}
+                        </td>
+                        <td>
+                            {{ .Name }}
+                        </td>
+                        <td>
+                            {{ .Age }}
+                        </td>
+                        <td>
+                            <a href="/show?id={{ .Id }}">View</a>
+                        </td>
+                        <td>
+                            <a href="/edit?id={{ .Id }}">Edit</a>
+                        </td>
+                        <td>
+                            <a href="/delete?id={{ .Id }}">Delete</a>
+                        <td>
+                    </tr>
+                {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    {{ template "Footer" }}
+{{ end }}

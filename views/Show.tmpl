@@ -1,0 +1,17 @@
+{{ define "Show" }}
+    {{ template "Header" }}
+    {{ template "Menu"  }}
+    <main class="flex-shrink-0">
+        <div class="container mt-5">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">User {{ .Id }}</h5>
+                    <p>Name: {{ .Name }}</p>
+                    <p>Age:  {{ .Age }}</p>
+                    <a href="/edit?id={{ .Id }}" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    {{ template "Footer" }}
+{{ end }}

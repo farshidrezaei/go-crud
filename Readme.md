@@ -6,7 +6,7 @@ Simple Crud With golang and mysql
 
 ### Step 1:
 
-Prepare and Import MySQL driver into your project Using Git Bash first install driver for Go's MySQL database package.
+Prepare and Import MySQL driver into your project Using Terminal first install driver for Go's MySQL database package.
 Run below command and install MySQL driver's
 
 ```shell
@@ -20,7 +20,7 @@ Now create go_crud Database
 
 ### Step 2:
 
-Creating the User Table Execute the following SQL query to create a table named User inside your MySQL database.
+Creating the Users Table Execute the following SQL query to create a table named users inside your MySQL database.
 We will use this table for all of our future operations.
 
 ```mysql
